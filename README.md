@@ -38,16 +38,6 @@ Database Design
 
 The database is fully normalized and enforces relational integrity using primary and foreign keys across core entities such as users, posts (requests), acceptances, and messages.
 
-What I Learned
-
-Building and structuring a full-stack Java web application
-
-Implementing authentication, CRUD operations, and relational database design
-
-Working with Java Servlets, JDBC, and Apache Tomcat
-
-Designing scalable backend logic using DAOs and SQL
-
 Future Improvements
 
 Real-time messaging using WebSockets
