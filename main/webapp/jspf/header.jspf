@@ -1,0 +1,32 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<div class="page">
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo-dot"></div>
+      <div class="logo-text">
+        Study<span class="logo-highlight">Buddy</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.jsp">Intro</a>
+        <a href="home">Home</a>
+        <a href="createpost">Create Post</a>
+        <a href="messagelist">Messages</a>
+        <a href="profile">Profile</a>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <c:choose>
+        <c:when test="${not empty sessionScope.user}">
+          <span>Hi, <strong>${sessionScope.user.username}</strong></span>
+          <form action="logout" method="post" style="margin:0;">
+            <button type="submit" class="btn-outline">Logout</button>
+          </form>
+        </c:when>
+        <c:otherwise>
+          <a href="login" class="btn-chip">Login</a>
+          <a href="register" class="btn-outline">Register</a>
+        </c:otherwise>
+      </c:choose>
+    </div>
+  </nav>
